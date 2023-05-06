@@ -2,9 +2,9 @@ import './Notes.css'
 
 function Notes(){
 
-    let getDataURL = 'http://localhost:4500/getNote';
+    let getDataURL = 'https://revesion-m11-backend.vercel.app/getNote';
 
-    let addURL = 'http://localhost:4500/createNote'
+    let addURL = 'https://revesion-m11-backend.vercel.app/createNote'
 
     let container = document.getElementsByClassName('notes');
     getData(getDataURL);
@@ -50,7 +50,7 @@ function Notes(){
 
     async function deleteNote(event){
         event.srcElement.innerText = 'Working';
-        let url = `http://localhost:4500/delete/${event.srcElement.className}`
+        let url = `https://revesion-m11-backend.vercel.app/delete/${event.srcElement.className}`
         let res = await fetch(url,{
             method:'DELETE'
         })
@@ -60,7 +60,7 @@ function Notes(){
 
     async function editNote(event){
 
-        let url = `http://localhost:4500/edit/${event.srcElement.className}`
+        let url = `https://revesion-m11-backend.vercel.app/edit/${event.srcElement.className}`
 
         let inputs = event.srcElement.parentNode.childNodes;
 
